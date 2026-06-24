@@ -1,6 +1,7 @@
+
 print('------------------------- smart result card -------------------------')
-print()
-print()
+print(                                                                       )
+print(                                                                       )
 
 while True:
     try:
@@ -100,14 +101,19 @@ print(f'total students : {students}')
 class_average = sum(student_percentages) / students
 print(f'class average : {class_average:.2f}%')
 
+# Highest percentage nikal li
 topper_percentage = max(student_percentages)
-topper_index = student_percentages.index(topper_percentage)
 
-topper_name = student_names[topper_index]
-topper_marks = student_totals[topper_index]
+print()
+print('--- Topper Information ---')
 
-print(f'topper name : {topper_name}')
-print(f'topper marks : {topper_marks}/{max_marks}')
-print(f'topper percentage : {topper_percentage:.2f}%')
+# Loop chala kar un sab bachon ko print karein jinki percentage highest ke barabar hai
+for index in range(students):
+    if student_percentages[index] == topper_percentage:
+        topper_name = student_names[index]
+        topper_marks = student_totals[index]
 
-print('------------------------------------------------------------')
+        print(f'topper name : {topper_name}')
+        print(f'topper marks : {topper_marks}/{max_marks}')
+        print(f'topper percentage : {topper_percentage:.2f}%')
+        print('------------------------------------------------------------')
